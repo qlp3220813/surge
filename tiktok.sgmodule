@@ -7,129 +7,13 @@
 #!arguments=解锁地区:日本
 #!arguments-desc=台湾\n日本\n韩国\n泰国\n越南\n英国\n法国\n德国\n美国\n巴西\n俄罗斯\n墨西哥\n土耳其\n西班牙\n阿根廷\n新加坡\n菲律宾\n马来西亚
 
-[Rule]
-## 此为抖音和TikTok共用域名，仅国外解析结果走代理
-AND, ((NOT, ((GEOIP, CN))), (DOMAIN, libra-sg.tiktokv.com)), Proxy
-## 此为抖音和TikTok共用域名，仅国外解析结果走代理
-AND, ((NOT, ((GEOIP, CN))), (DOMAIN, pitaya.bytedance.com)), Proxy
-DOMAIN, api.snapkit.com, Proxy
-DOMAIN, api2-16-h2.musical.ly.edgekey.net, Proxy
-DOMAIN, bytedance.map.fastly.net, Proxy
-DOMAIN, cdn-tos-sg.byteintl.net, Proxy
-DOMAIN, cdn-tos-useast2a.byteintl.net, Proxy
-DOMAIN, cdn-tos-va.byteintl.net, Proxy
-DOMAIN, cocacola.co.jp, Proxy
-DOMAIN, courses.snapsolve.com, Proxy
-DOMAIN, engagements.appsflyer.com, Proxy
-DOMAIN, lf1-ttcdn-tos.pstatp.com, Proxy
-DOMAIN, lf16-campaign.ttlstatic.com, Proxy
-DOMAIN, lf16-csp.oecstatic.com, Proxy
-DOMAIN, lf16-pkgcdn.pitaya-clientai.com, Proxy
-DOMAIN, lf16-scmcdn.oecstatic.com, Proxy
-DOMAIN, lf19-csp.oecstatic.com, Proxy
-DOMAIN, lf19-pkgcdn.pitaya-clientai.com, Proxy
-DOMAIN, lf19-scmcdn.oecstatic.com, Proxy
-DOMAIN, musically-alternate.app.link, Proxy
-DOMAIN, musically.app.link, Proxy
-DOMAIN, p1-tt-ipv6.byteimg.com, Proxy
-DOMAIN, p1-tt.byteimg.com, Proxy
-DOMAIN, p16-tiktokcdn-com.akamaized.net, Proxy
-DOMAIN, p26-tt.byteimg.com, Proxy
-DOMAIN, p3-tt-ipv6.byteimg.com, Proxy
-DOMAIN, p9-tt.byteimg.com, Proxy
-DOMAIN, pull-f3-hs.pstatp.com, Proxy
-DOMAIN, pull-f5-hs.flive.pstatp.com, Proxy
-DOMAIN, pull-f5-hs.pstatp.com, Proxy
-DOMAIN, pull-f5-mus.pstatp.com, Proxy
-DOMAIN, pull-flv-f1-hs.pstatp.com, Proxy
-DOMAIN, pull-flv-f6-hs.pstatp.com, Proxy
-DOMAIN, pull-flv-l1-hs.pstatp.com, Proxy
-DOMAIN, pull-flv-l1-mus.pstatp.com, Proxy
-DOMAIN, pull-flv-l6-hs.pstatp.com, Proxy
-DOMAIN, pull-hls-l1-mus.pstatp.com, Proxy
-DOMAIN, pull-l3-hs.pstatp.com, Proxy
-DOMAIN, pull-rtmp-f1-hs.pstatp.com, Proxy
-DOMAIN, pull-rtmp-f6-hs.pstatp.com, Proxy
-DOMAIN, pull-rtmp-l1-hs.pstatp.com, Proxy
-DOMAIN, pull-rtmp-l1-mus.pstatp.com, Proxy
-DOMAIN, pull-rtmp-l6-hs.pstatp.com, Proxy
-DOMAIN, roovza-launches.appsflyersdk.com, Proxy
-DOMAIN, sessions.bugsnag.com, Proxy
-DOMAIN, sf1-ttcdn-tos.pstatp.com, Proxy
-DOMAIN, sf6-ttcdn-tos.pstatp.com, Proxy
-DOMAIN, tiktokcdn-us.com.atomile.com, Proxy
-DOMAIN, tiktokcdn-us.com.c.worldfcdn2.com, Proxy
-DOMAIN, tiktokcdn.com.atomile.com, Proxy
-DOMAIN, tiktokcdn.com.c.bytefcdn-ttpeu.com, Proxy
-DOMAIN, tiktokcdn.com.c.worldfcdn.com, Proxy
-DOMAIN, tiktokcdn.com.rocket-cdn.com, Proxy
-DOMAIN, tiktokcdn.com.tlivepush.com, Proxy
-DOMAIN, tiktokv.com.c.worldfcdn.com, Proxy
-DOMAIN, tiktokv.com.c.worldfcdn2.com, Proxy
-DOMAIN, ttlivecdn.com.c.worldfcdn.com, Proxy
-DOMAIN, video.h1.bytedance.map.fastly.net, Proxy
-DOMAIN-SUFFIX, bytedance.com, Proxy
-DOMAIN-SUFFIX, bytedance.net, Proxy
-DOMAIN-SUFFIX, bytedapm.com, Proxy
-DOMAIN-SUFFIX, bytefcdn-oversea.com, Proxy
-DOMAIN-SUFFIX, bytefcdn-ttpeu.com, Proxy
-DOMAIN-SUFFIX, bytegecko-i18n.com, Proxy
-DOMAIN-SUFFIX, byteglb.com, Proxy
-DOMAIN-SUFFIX, byteicdn.com, Proxy
-DOMAIN-SUFFIX, byteigtm.com, Proxy
-DOMAIN-SUFFIX, byteintl.com, Proxy
-DOMAIN-SUFFIX, byteintl.net, Proxy
-DOMAIN-SUFFIX, byteoversea.com, Proxy
-DOMAIN-SUFFIX, byteoversea.net, Proxy
-DOMAIN-SUFFIX, bytetcdn.com, Proxy
-DOMAIN-SUFFIX, capcut.com, Proxy
-DOMAIN-SUFFIX, ibytedtos.com, Proxy
-DOMAIN-SUFFIX, ibyteimg.com, Proxy
-DOMAIN-SUFFIX, ipstatp.com, Proxy
-DOMAIN-SUFFIX, isnssdk.com, Proxy
-DOMAIN-SUFFIX, muscdn.com, Proxy
-DOMAIN-SUFFIX, musemuse.cn, Proxy
-DOMAIN-SUFFIX, musical.ly, Proxy
-DOMAIN-SUFFIX, sgpstatp.com, Proxy
-DOMAIN-SUFFIX, sgsnssdk.com, Proxy
-DOMAIN-SUFFIX, tik-tokapi.com, Proxy
-DOMAIN-SUFFIX, tiktok-usts.net, Proxy
-DOMAIN-SUFFIX, tiktok.com, Proxy
-DOMAIN-SUFFIX, tiktok.in, Proxy
-DOMAIN-SUFFIX, tiktokcdn-eu.com, Proxy
-DOMAIN-SUFFIX, tiktokcdn-eu.net, Proxy
-DOMAIN-SUFFIX, tiktokcdn-in.com, Proxy
-DOMAIN-SUFFIX, tiktokcdn-us.com, Proxy
-DOMAIN-SUFFIX, tiktokcdn.com, Proxy
-DOMAIN-SUFFIX, tiktokd.net, Proxy
-DOMAIN-SUFFIX, tiktokd.org, Proxy
-DOMAIN-SUFFIX, tiktokglobalshop.com, Proxy
-DOMAIN-SUFFIX, tiktokglobalshopv.com, Proxy
-DOMAIN-SUFFIX, tiktokmusic.app, Proxy
-DOMAIN-SUFFIX, tiktokshop.com, Proxy
-DOMAIN-SUFFIX, tiktokstaticb.com, Proxy
-DOMAIN-SUFFIX, tiktokv.com, Proxy
-DOMAIN-SUFFIX, tiktokv.eu, Proxy
-DOMAIN-SUFFIX, tiktokv.us, Proxy
-DOMAIN-SUFFIX, tiktokw.us, Proxy
-DOMAIN-SUFFIX, tlivecdn.com, Proxy
-DOMAIN-SUFFIX, tlivepush.com, Proxy
-DOMAIN-SUFFIX, ttadsmanager.com, Proxy
-DOMAIN-SUFFIX, ttapis.com, Proxy
-DOMAIN-SUFFIX, ttdns2.com, Proxy
-DOMAIN-SUFFIX, ttlivecdn.com, Proxy
-DOMAIN-SUFFIX, ttoversea.net, Proxy
-DOMAIN-SUFFIX, ttoverseaus.net, Proxy
-DOMAIN-SUFFIX, ttwstatic.com, Proxy
-DOMAIN-SUFFIX, tzvbfs.com, Proxy
 
-
-[Rewrite]
+[Map Local]
 # 去广告
-^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject-dict
+^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ data-type=text data="{}" status-code=200
 
 [Script]
-http-request https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
+TikTok解锁 = type=http-request, pattern=https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js
 
 [Mitm]
 hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com, *.tiktokcdn.com
