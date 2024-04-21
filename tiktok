@@ -1,0 +1,20 @@
+#!name=TikTok解锁
+#!desc=移除TikTok视频水印并自定义解锁地区，需要配置此插件至对应地区的节点。
+#!openUrl= 
+#!author=Keywos
+#!homepage=https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TikTok.png
+#!arguments=解锁地区:日本
+#!arguments-desc=台湾\n日本\n韩国\n泰国\n越南\n英国\n法国\n德国\n美国\n巴西\n俄罗斯\n墨西哥\n土耳其\n西班牙\n阿根廷\n新加坡\n菲律宾\n马来西亚
+
+
+
+[Rewrite]
+# 去广告
+^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject-dict
+
+[Script]
+http-request https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
+
+[Mitm]
+hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com, *.tiktokcdn.com
