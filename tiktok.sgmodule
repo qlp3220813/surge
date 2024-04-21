@@ -8,8 +8,10 @@
 #!arguments-desc=台湾\n日本\n韩国\n泰国\n越南\n英国\n法国\n德国\n美国\n巴西\n俄罗斯\n墨西哥\n土耳其\n西班牙\n阿根廷\n新加坡\n菲律宾\n马来西亚
 
 [Rule]
-AND, ((NOT, ((GEOIP, CN))), (DOMAIN, libra-sg.tiktokv.com)), PROXY // 此为抖音和TikTok共用域名，仅国外解析结果走代理
-AND, ((NOT, ((GEOIP, CN))), (DOMAIN, pitaya.bytedance.com)), PROXY // 此为抖音和TikTok共用域名，仅国外解析结果走代理
+## 此为抖音和TikTok共用域名，仅国外解析结果走代理
+AND, ((NOT, ((GEOIP, CN))), (DOMAIN, libra-sg.tiktokv.com)), Proxy
+## 此为抖音和TikTok共用域名，仅国外解析结果走代理
+AND, ((NOT, ((GEOIP, CN))), (DOMAIN, pitaya.bytedance.com)), Proxy
 DOMAIN, api.snapkit.com, Proxy
 DOMAIN, api2-16-h2.musical.ly.edgekey.net, Proxy
 DOMAIN, bytedance.map.fastly.net, Proxy
