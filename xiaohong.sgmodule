@@ -1,5 +1,5 @@
-#!name=小红书surge自己做的
-#!desc=解锁本地VIP功能 按自定义随意修改
+#!name=小红书sgmodule格式自己做的
+#!desc=作者@fmz200
 [Rule]
 # > 小红书
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
