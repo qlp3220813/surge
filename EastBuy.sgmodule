@@ -1,0 +1,13 @@
+#!name=东方甄选签到
+#!desc=抓取东方甄选 App/小程序 token，并定时执行签到。thirdLogin 必须使用 http-response，因为 accessToken/refreshToken 在响应体里。
+#!author=Codex
+
+[Script]
+东方甄选签到 = type=cron,cronexp=0 8 * * *,wake-system=1,timeout=60,script-path=https://gist.githubusercontent.com/qlp3220813/8ad84b954aed7fd4b11d65958d15ff6d/raw/09cd54ef4d204c074fd6e85acebc38835035db1f/eastbuy.js,script-update-interval=0
+
+东方甄选获取签到Token = type=http-request,pattern=^https:\/\/capi\.eastbuy\.com\/c\/api\/signin\/(page|click),requires-body=0,script-path=https://gist.githubusercontent.com/qlp3220813/8ad84b954aed7fd4b11d65958d15ff6d/raw/09cd54ef4d204c074fd6e85acebc38835035db1f/eastbuy.js,script-update-interval=0
+
+东方甄选获取小程序登录Token = type=http-response,pattern=^https:\/\/passport\.eastbuy\.com\/login\/v1\/thirdLogin,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/qlp3220813/8ad84b954aed7fd4b11d65958d15ff6d/raw/09cd54ef4d204c074fd6e85acebc38835035db1f/eastbuy.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% capi.eastbuy.com, passport.eastbuy.com
