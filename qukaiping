@@ -1,0 +1,19 @@
+#!name=运营商App去开屏广告
+#!desc=移除中国联通、中国电信、中国移动App开屏广告
+#!category=Ad Blocking
+
+[Rule]
+# 中国联通
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT,pre-matching
+# 中国电信
+DOMAIN,ad.21cn.com,REJECT,pre-matching
+DOMAIN,ad.k.21cn.com,REJECT,pre-matching
+DOMAIN,admarket.21cn.com,REJECT,pre-matching
+DOMAIN,adshows.21cn.com,REJECT,pre-matching
+# 中国移动
+URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit,REJECT
+URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList,REJECT
+URL-REGEX,^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket,REJECT
+
+[MITM]
+hostname = %APPEND% client.app.coc.10086.cn, h.app.coc.10086.cn, app.10086.cn
