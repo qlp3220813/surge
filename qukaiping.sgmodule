@@ -15,4 +15,4 @@ URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/
 URL-REGEX,^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket,REJECT
 
 [MITM]
-hostname = %APPEND% client.app.coc.10086.cn, h.app.coc.10086.cn, app.10086.cn
+hostname = %APPEND% *.10086.cn, *.21cn.com, *.10010.com
