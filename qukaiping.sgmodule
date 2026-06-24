@@ -1,7 +1,6 @@
 #!name=运营商App去开屏广告
 #!desc=移除中国联通、中国电信、中国移动App开屏广告
-#!category=Ad Blocking
-
+#!category=Remove AD
 [Rule]
 # 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com,REJECT,pre-matching
