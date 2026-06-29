@@ -182,12 +182,17 @@ def save_cache():
 if __name__ == '__main__':
     load_cache()
     accs = [a.split('#') for a in os.environ.get('chinaTelecomAccount', '').split('&') if '#' in a]
-    if not accs: log("未找到账号，请设置 chinaTelecomAccount"); sys.exit(1)
-
+    if not accs: 
+        log("未找到账号，请设置 chinaTelecomAccount")
+        sys.exit(1)
+    
     for i, (p, pwd) in enumerate(accs, 1):
-    log(f"\n{'='*10} 账号[{i}] {mask(p)} {'='*10}")
-    u = login(p, pwd)
-    if u: sign_tasks(u)
-    time.sleep(2)
-
-sendNotify("电信任务通知", "\n".join(global_logs))
+        # 注意：下面这三行必须比上面的 for 进一步向右缩进（对齐）
+        log(f"\n{'='*10} 账号[{i}] {mask(p)} {'='*10}")
+        u = login(p, pwd)
+        if u: 
+            sign_tasks(u)
+        time.sleep(2)
+    
+    # 这一行要和 for 对齐，表示循环全部结束后执行一次通知
+    sendNotify("电信任务通知", "\n".join(global_logs))
