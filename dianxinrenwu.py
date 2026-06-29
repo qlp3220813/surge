@@ -7,7 +7,7 @@ from Crypto.Cipher import PKCS1_v1_5, DES3, AES
 from Crypto.Util.Padding import pad, unpad
 from requests.adapters import HTTPAdapter
 from urllib3.util.ssl_ import create_urllib3_context
-from notify import sendNotify
+from notify import send
 
 # --- 配置与常量 ---
 KEYS = {
@@ -195,4 +195,4 @@ if __name__ == '__main__':
         time.sleep(2)
     
     # 这一行要和 for 对齐，表示循环全部结束后执行一次通知
-    sendNotify("电信任务通知", "\n".join(global_logs))
+    send("电信任务通知", "\n".join(global_logs))
